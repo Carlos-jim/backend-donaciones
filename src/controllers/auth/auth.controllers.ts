@@ -10,8 +10,8 @@ export const createUserController = async (req: any, res: any) => {
         return res.status(400).json({ errors: errors.array() });
     }
     try {
-        const { email, password_hash } = req.body;
-        const userId = await createUser({ email, password_hash });
+        const { email, password_hash, first_name, last_name } = req.body;
+        const userId = await createUser({ email, password_hash, first_name, last_name });
         res.status(201).json({ message: 'Usuario registrado exitosamente', userId });
     } catch (error) {
         if (typeof error === "object" && error !== null && "message" in error && typeof (error as any).message === "string") {

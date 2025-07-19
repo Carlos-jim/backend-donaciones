@@ -10,7 +10,7 @@ export const createUser = async (user: User) => {
     if ((rows as any[]).length > 0) throw new Error('El usuario ya existe');
     const hashPass = await bcrypt.hash(password_hash, 10);
     const [result]: any = await pool.query(
-        'INSERT INTO users(email, password_hash) VALUES (?, ?)',
+        'INSERT INTO users(email, password_hash, first_name, last_name) VALUES (?, ?)',
         [email, hashPass]
     );
     return result?.insertId;

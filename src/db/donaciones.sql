@@ -1,9 +1,10 @@
-CREATE DATABASE donacionesDB;
-
+CREATE DATABASE IF NOT EXISTS donacionesDB;
 USE donacionesDB;
 
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
   id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  firts_name VARCHAR(255),
+  last_name VARCHAR(255),
   email VARCHAR(255) UNIQUE,
-  password_hash VARCHAR(255),
+  password_hash VARCHAR(255)
 );
