@@ -1,0 +1,28 @@
+# 👉 Dependencias (se regeneran con npm install)
+node_modules/
+
+# 👉 Builds de TypeScript
+dist/
+build/
+
+# 👉 Configuración de entorno
+.env
+
+# 👉 Logs y salidas temporales
+*.log
+*.tmp
+
+# 👉 Archivos del sistema operativo
+.DS_Store       # macOS
+Thumbs.db       # Windows
+
+# 👉 Archivos del editor o IDE
+.vscode/
+.idea/
+
+# 👉 Archivos generados por pruebas (si usas Jest o similares)
+coverage/
+*.test.ts
+
+# 👉 Archivos de caché
+.cache/
